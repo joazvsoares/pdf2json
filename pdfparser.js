@@ -158,7 +158,7 @@ let PDFParser = (function () {
 		_startParsingPDF.call(this, pdfBuffer);
 	};
 
-	PdfParser.prototype.getRawTextContent = function() { return this.PDFJS.getRawTextContent(); };
+	PdfParser.prototype.getRawTextContent = function(separator) { return this.PDFJS.getRawTextContent(separator); };
 	PdfParser.prototype.getRawTextContentStream = function() { return _createContentStream(this.getRawTextContent()); };
 
 	PdfParser.prototype.getAllFieldsTypes = function() { return this.PDFJS.getAllFieldsTypes(); };
